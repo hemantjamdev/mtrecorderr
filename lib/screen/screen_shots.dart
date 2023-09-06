@@ -165,7 +165,6 @@ class _ScreenShotsState extends State<ScreenShots> {
               ],
             ),
             onPressed: () async {
-              PermissionStatus? storage = await Permission.storage.request();
               await Permission.manageExternalStorage.request();
               // if (storage.isGranted) {
               provider.takeScreenshot();

@@ -1,10 +1,8 @@
-import 'dart:developer';
 import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:mtrecorder/model/model.dart';
 import 'package:mtrecorder/provider/recording_provider.dart';
-import 'package:mtrecorder/screen/edit_video.dart';
 import 'package:mtrecorder/utils/app_colors.dart';
 import 'package:mtrecorder/utils/share.dart';
 import 'package:path/path.dart' as path;

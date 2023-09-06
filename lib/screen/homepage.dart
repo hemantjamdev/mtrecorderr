@@ -11,7 +11,6 @@ import 'package:mtrecorder/provider/recording_provider.dart';
 import 'package:mtrecorder/provider/screenshot_provider.dart';
 import 'package:mtrecorder/screen/camera_feed.dart';
 import 'package:mtrecorder/screen/edit.dart';
-import 'package:mtrecorder/screen/screen_shots.dart';
 import 'package:mtrecorder/screen/settings.dart';
 import 'package:mtrecorder/screen/video_list.dart';
 import 'package:mtrecorder/utils/check_android_version.dart';
@@ -26,6 +25,7 @@ import 'package:provider/provider.dart';
 import '../utils/app_colors.dart';
 import '../widgets/image_button.dart';
 import '../widgets/logo.dart';
+import 'folder_list.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -92,7 +92,7 @@ class HomePageState extends State<HomePage>
 
   List<Widget> screens = const [
     VideoList(),
-    ScreenShots(),
+    FolderList(),
     EditPage(),
     Settings(),
   ];

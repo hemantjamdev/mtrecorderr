@@ -32,7 +32,7 @@ class _VideoListState extends State<VideoList> {
 
   @override
   Widget build(BuildContext context) {
-    Future.delayed(Duration(milliseconds: 100), () {
+    Future.delayed(const Duration(milliseconds: 100), () {
       Provider.of<RecordingProvider>(context, listen: false)
           .getAllMP4VideosFromLocation();
     });
@@ -54,10 +54,10 @@ class _VideoListState extends State<VideoList> {
                             "There is no Video",
                             style: TextStyle(color: AppColors.primaryColor),
                           ),
-                          SizedBox(
-                            height: 50,
+                          const SizedBox(
+                            height: 50
                           ),
-                          AdProvider.showFullAd()
+                          Expanded(child: AdProvider.showFullAd())
                         ],
                       ),
                     )
@@ -79,14 +79,14 @@ class _VideoListState extends State<VideoList> {
                                       children: [
                                         Text(
                                           provider.videoDirectory != null
-                                              ? "${provider.videoDirectory!.path}"
+                                              ? provider.videoDirectory!.path
                                               : "",
                                           overflow: TextOverflow.ellipsis,
                                           maxLines: 2,
                                         ),
                                         Text(
                                           "${provider.formattedSize}",
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontWeight: FontWeight.bold),
                                         )
                                       ],
@@ -300,7 +300,7 @@ class _VideoListState extends State<VideoList> {
                   ? Align(
                       alignment: Alignment.bottomCenter,
                       child: AdProvider.showBannerAd())
-                  : SizedBox()
+                  : const SizedBox()
             ],
           ),
           floatingActionButton: FloatingActionButton.extended(

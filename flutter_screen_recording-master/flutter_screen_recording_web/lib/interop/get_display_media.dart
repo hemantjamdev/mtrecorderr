@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter, library_prefixes, camel_case_types
+
 import 'dart:async';
 import 'dart:html';
 import 'dart:js' as JS;

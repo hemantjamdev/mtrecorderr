@@ -11,6 +11,8 @@ import 'package:mtrecorder/utils/strings.dart';
 import 'package:provider/provider.dart';
 import 'package:sizer/sizer.dart';
 
+import 'provider/image_provider.dart';
+
 class RecordApp extends StatelessWidget {
   const RecordApp({Key? key}) : super(key: key);
 
@@ -29,8 +31,8 @@ class RecordApp extends StatelessWidget {
               create: (context) => HomeProvider()),
           ChangeNotifierProvider<NotificationProvider>(
               create: (context) => NotificationProvider()),
-         /* ChangeNotifierProvider<FloatingProvider>(
-              create: (context) => FloatingProvider()),*/
+          ChangeNotifierProvider<ImageListProvider>(
+              create: (context) => ImageListProvider()),
           ChangeNotifierProvider<CameraFeedProvider>(
               create: (context) => CameraFeedProvider()),
         ],

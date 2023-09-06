@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 library flutter_screen_recording_platform_interface;
 
 import 'dart:async';

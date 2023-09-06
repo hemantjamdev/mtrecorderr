@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_web_libraries_in_flutter, depend_on_referenced_packages, prefer_typing_uninitialized_variables, avoid_print, unnecessary_this, unnecessary_new, prefer_interpolation_to_compose_strings
+
 library flutter_screen_recording_web;
 
 import 'dart:async';

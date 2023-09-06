@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mtrecorder/screen/recycle_bin.dart';
 import 'package:sizer/sizer.dart';
 
 import '../utils/app_colors.dart';

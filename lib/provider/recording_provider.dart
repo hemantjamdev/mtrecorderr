@@ -76,9 +76,6 @@ class RecordingProvider with ChangeNotifier {
   Future<void> startStopRecording() async {
     log("recording method call---->");
     PermissionStatus? microphone = await Permission.microphone.request();
-    PermissionStatus? storage = Platform.isIOS
-        ? await Permission.photos.request()
-        : await Permission.storage.request();
     if (microphone.isGranted) {
       log("microphone granted---->");
       if (Platform.isAndroid) {
@@ -94,10 +91,8 @@ class RecordingProvider with ChangeNotifier {
         Permission.photos.request();
       }*/
       if (isRecording) {
-        log("recording stopped---->");
         String recordedVideoPath =
             await FlutterScreenRecording.stopRecordScreen;
-        log("video path after stop -->${recordedVideoPath}");
         timer!.cancel();
         seconds = 0;
         isRecording = !isRecording;

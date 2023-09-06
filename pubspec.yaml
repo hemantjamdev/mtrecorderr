@@ -57,6 +57,7 @@ dependencies:
   camera: ^0.10.5+2
   uuid: ^3.0.7
   applovin_max: ^3.1.2
+  photo_manager: ^2.7.1
 
 
 

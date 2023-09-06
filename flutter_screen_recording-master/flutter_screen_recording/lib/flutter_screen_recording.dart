@@ -1,3 +1,5 @@
+// ignore_for_file: depend_on_referenced_packages
+
 import 'package:flutter/foundation.dart';
 import 'package:flutter_foreground_task/flutter_foreground_task.dart';
 import 'package:flutter_screen_recording_platform_interface/flutter_screen_recording_platform_interface.dart';
@@ -7,12 +9,8 @@ import 'dart:io';
 
 class FlutterScreenRecording {
   static Future<bool> startRecordScreen(String name, {String? titleNotification, String? messageNotification}) async{
-    if(titleNotification == null ){
-      titleNotification = "";
-    }
-    if(messageNotification == null ){
-      messageNotification = "";
-    }
+    titleNotification ??= "";
+    messageNotification ??= "";
 
     await _maybeStartFGS(titleNotification, messageNotification);
     final bool start = await FlutterScreenRecordingPlatform.instance.startRecordScreen(name);
@@ -70,6 +68,5 @@ class FlutterScreenRecording {
   }
 
   static void globalForegroundService() {
-    print("current datetime is ${DateTime.now()}");
   }
 }
